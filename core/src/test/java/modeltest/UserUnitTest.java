@@ -1,5 +1,7 @@
 package modeltest;
 
+import exceptions.ValidationException;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import user.model.User;
 import user.model.UserStatus;
@@ -18,5 +20,23 @@ public class UserUnitTest {
                 () -> assertNotNull(user.getCreatedAt())
         );
         System.out.println(user.getActivationCode());
+    }
+
+    @Test
+    public void instanceUser_WrongMail_ThrowsException() {
+        //Null email
+        Assertions.assertThrows(ValidationException.class, () -> User.factory(null, "secret123"));
+
+        //Empty email
+        Assertions.assertThrows(ValidationException.class, () -> User.factory("", "secret123"));
+    }
+
+    @Test
+    public void instanceUser_WrongPassword_ThrowsException() {
+        //Null password
+        Assertions.assertThrows(ValidationException.class, () -> User.factory("john@example.com", null));
+
+        //Empty password
+        Assertions.assertThrows(ValidationException.class, () -> User.factory("john@example.com", ""));
     }
 }
