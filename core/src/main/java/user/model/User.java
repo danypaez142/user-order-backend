@@ -2,6 +2,7 @@ package user.model;
 
 import exceptions.ValidationException;
 import utils.ActivationCodeGenerator;
+import utils.MailValidator;
 
 import java.time.LocalDateTime;
 
@@ -25,6 +26,8 @@ public class User {
     public static User factory(String email, String password) {
         if(email == null || email.isEmpty()){
             throw new ValidationException("email is required");
+        }else if(!MailValidator.isValid(email)){
+            throw new ValidationException("invalid email");
         }
         if(password == null || password.isEmpty()) {
             throw new ValidationException("password is required");

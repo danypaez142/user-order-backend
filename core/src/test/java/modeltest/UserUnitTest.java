@@ -29,6 +29,9 @@ public class UserUnitTest {
 
         //Empty email
         Assertions.assertThrows(ValidationException.class, () -> User.factory("", "secret123"));
+
+        //Invalid email
+        Assertions.assertThrows(ValidationException.class, () -> User.factory(".@example.com", "secret123"));
     }
 
     @Test
