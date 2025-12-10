@@ -23,6 +23,17 @@ public class User {
         this.activationExpiresAt = this.createdAt.plusMinutes(30);
         this.activationCode = ActivationCodeGenerator.generateActivationCode();
     }
+
+    private User(Long id, String email, String password, UserStatus status, String activationCode, LocalDateTime activationExpiresAt, LocalDateTime createdAt) {
+        this.id = id;
+        this.email = email;
+        this.password = password;
+        this.status = status;
+        this.activationCode = activationCode;
+        this.activationExpiresAt = activationExpiresAt;
+        this.createdAt = createdAt;
+    }
+
     public static User factory(String email, String password) {
         if(email == null || email.isEmpty()){
             throw new ValidationException("email is required");
@@ -33,6 +44,11 @@ public class User {
             throw new ValidationException("password is required");
         }
         return new User(email, password);
+    }
+
+    public static User factoryFromEntity(Long id, String email, String password, UserStatus status, String activationCode,
+                                         LocalDateTime activationExpiresAt, LocalDateTime createdAt){
+        return new User(id, email, password, status, activationCode, activationExpiresAt, createdAt);
     }
 
     public Long getId() {
