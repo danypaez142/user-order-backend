@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 @Entity(name = "users")
 public class UserEntity {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotNull
     private String email;
