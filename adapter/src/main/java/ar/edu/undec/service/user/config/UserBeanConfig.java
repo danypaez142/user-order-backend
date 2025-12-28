@@ -7,7 +7,7 @@ import user.repository.RegisterUserRepository;
 import user.usecase.RegisterUserUseCase;
 
 @Configuration
-public class UserConfig {
+public class UserBeanConfig {
     @Bean
     RegisterUserInput registerUserInput(RegisterUserRepository repository){
         return new RegisterUserUseCase(repository);
