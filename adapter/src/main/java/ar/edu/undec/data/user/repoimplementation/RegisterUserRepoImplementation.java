@@ -19,7 +19,7 @@ public class RegisterUserRepoImplementation implements RegisterUserRepository {
 
     @Override
     public Boolean existEmail(String email) {
-        return repository.findByEmail(email);
+        return repository.existsByEmail(email);
     }
 
     @Override
