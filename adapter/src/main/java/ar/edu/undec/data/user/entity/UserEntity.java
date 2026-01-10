@@ -15,8 +15,8 @@ public class UserEntity {
     private String email;
     @NotNull
     private String password;
-    @Enumerated
-    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status", nullable = false)
     private UserStatus status;
     private String activationCode;
     private LocalDateTime activationExpiresAt;
