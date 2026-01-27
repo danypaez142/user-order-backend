@@ -53,7 +53,7 @@ public class ActivateUserUseCaseTest {
         UserDTO dto = new UserDTO("john@example.com", "secret123");
         dto.setActivationCode("681fb5e1-1");
         dto.setId(1L);
-        dto.setCreatedAt(LocalDateTime.of(2026,01,14,0,0,0));
+        dto.setCreatedAt(LocalDateTime.of(2026,1,14,0,0,0));
         dto.setActivationExpiresAt(dto.getCreatedAt().plusMinutes(30));
         dto.setStatus(UserStatus.PENDING);
 
