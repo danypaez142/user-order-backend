@@ -22,7 +22,7 @@ public class ActivateUserRepoImplementation implements ActivateUserRepository {
     @Override
     public User getUserById(Long id) {
         Optional<UserEntity> user = repository.findById(id);
-        return user.isEmpty() ? null : UserMapper.mapEntityToCore(user.get());
+        return user.map(UserMapper::mapEntityToCore).orElse(null);
     }
 
     @Override

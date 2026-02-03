@@ -36,7 +36,7 @@ public class ActivateUserUseCase implements ActivateUserInput {
     private boolean isCorrectActivationCode(UserDTO user, User userForActivate) {
         return user != null && userForActivate != null && user.getActivationCode() != null
                 && !user.getActivationCode().isBlank()
-                && userForActivate.getActivationCode().trim().toLowerCase().equals(user.getActivationCode().trim().toLowerCase());
+                && userForActivate.getActivationCode().trim().equalsIgnoreCase(user.getActivationCode().trim());
     }
 
     private boolean isUserExpired(User user) {
