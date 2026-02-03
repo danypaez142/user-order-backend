@@ -20,12 +20,26 @@ public class Order {
         this.createdAt = LocalDateTime.now();
     }
 
+    private Order(Long id, User user, OrderStatus status, Double amount, LocalDateTime createdAt, LocalDateTime updatedAt) {
+        this.id = id;
+        this.user = user;
+        this.status = status;
+        this.amount = amount;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+    }
+
     public static Order factory(User user, Double amount) {
         if(amount == null || amount == 0.0){
             throw new ValidationException("Order's amount can't be null or 0");
         }
 
         return new Order(user, amount);
+    }
+
+    public static Order factoryFromEntity(Long id, User user, OrderStatus status, Double amount, LocalDateTime createdAt,
+                                          LocalDateTime updatedAt){
+        return new Order(id, user,status,amount,createdAt,updatedAt);
     }
 
     public Long getId() {
