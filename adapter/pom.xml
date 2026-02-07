@@ -28,7 +28,7 @@
     </scm>
     <properties>
         <java.version>21</java.version>
-        <jasper.version>6.20.0</jasper.version>
+        <jasper.version>6.19.0</jasper.version>
         <dinamycjasper-core-fonts.version>1.0</dinamycjasper-core-fonts.version>
     </properties>
     <dependencies>
