@@ -14,6 +14,7 @@ import user.usecase.ExportUsersForPDFUseCase;
 import utils.input.PDFGeneratorInput;
 
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +36,7 @@ public class ExportUsersForPDFUseCaseTest {
     void setup() {input = new ExportUsersForPDFUseCase(repository, pdfGeneratorInput);}
 
     @Test
-    public void getUsersReportPDF_FileGenerated_Successful(){
+    public void getUsersReportPDF_FileGenerated_Successful() throws IOException {
         when(repository.getAllSavedUsers()).thenReturn(getListUsersForReport());
         when(pdfGeneratorInput.generateUsersPDF(anyList())).thenReturn(new ByteArrayOutputStream(1024));
         ByteArrayOutputStream reportPDF = input.generateUsersPDF();
@@ -43,7 +44,7 @@ public class ExportUsersForPDFUseCaseTest {
     }
 
     @Test
-    public void getUsersReportPDF_ErrorWhilePDFIsGenerated_ThrowException(){
+    public void getUsersReportPDF_ErrorWhilePDFIsGenerated_ThrowException() throws IOException {
         when(pdfGeneratorInput.generateUsersPDF(anyList())).thenThrow(RuntimeException.class);
         Assertions.assertThrows(RuntimeException.class, () -> pdfGeneratorInput.generateUsersPDF(getListUsersForReport()));
     }
