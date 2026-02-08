@@ -27,7 +27,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement>
-					<font fontName="Roboto" size="12" isBold="true"/>
+					<font fontName="SansSerif" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Id]]></text>
 			</staticText>
@@ -38,7 +38,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement>
-					<font fontName="Roboto" size="12" isBold="true"/>
+					<font fontName="SansSerif" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Email]]></text>
 			</staticText>
@@ -49,7 +49,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement>
-					<font fontName="Roboto" size="12" isBold="true"/>
+					<font fontName="SansSerif" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Fecha Creación]]></text>
 			</staticText>
@@ -60,7 +60,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement>
-					<font fontName="Roboto" size="12" isBold="true"/>
+					<font fontName="SansSerif" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Estado]]></text>
 			</staticText>
@@ -75,7 +75,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement>
-					<font fontName="Roboto"/>
+					<font fontName="SansSerif"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{id}.toString().replace(".0", "")]]></textFieldExpression>
 			</textField>
@@ -84,7 +84,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement>
-					<font fontName="Roboto"/>
+					<font fontName="SansSerif"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
 			</textField>
@@ -94,7 +94,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement>
-					<font fontName="Roboto"/>
+					<font fontName="SansSerif"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{createdAt}]]></textFieldExpression>
 			</textField>
@@ -106,7 +106,7 @@
 					<printWhenExpression><![CDATA[$F{status}.equals("ACTIVE" )]]></printWhenExpression>
 				</reportElement>
 				<textElement>
-					<font fontName="Roboto" isBold="true"/>
+					<font fontName="SansSerif" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ACTIVO]]></text>
 			</staticText>
@@ -118,7 +118,7 @@
 					<printWhenExpression><![CDATA[$F{status}.equals("PENDING")]]></printWhenExpression>
 				</reportElement>
 				<textElement>
-					<font fontName="Roboto" isBold="true"/>
+					<font fontName="SansSerif" isBold="true"/>
 				</textElement>
 				<text><![CDATA[PENDIENTE]]></text>
 			</staticText>
@@ -130,7 +130,7 @@
 					<printWhenExpression><![CDATA[$F{status}.equals("EXPIRED" )]]></printWhenExpression>
 				</reportElement>
 				<textElement>
-					<font fontName="Roboto" isBold="true"/>
+					<font fontName="SansSerif" isBold="true"/>
 				</textElement>
 				<text><![CDATA[EXPIRADO]]></text>
 			</staticText>

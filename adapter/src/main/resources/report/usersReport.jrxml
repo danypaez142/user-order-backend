@@ -30,14 +30,14 @@
 				<imageExpression><![CDATA[$P{logoUndec}]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement x="149" y="37" width="351" height="25" forecolor="#5C7CC6" uuid="e2b1b89e-dc86-4865-8431-cd84f5a53f39">
+				<reportElement x="132" y="36" width="351" height="37" forecolor="#5C7CC6" uuid="e2b1b89e-dc86-4865-8431-cd84f5a53f39">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement>
-					<font fontName="Roboto" size="20" isBold="true"/>
+					<font fontName="SansSerif" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Reporte de Usuarios Registrados
 ]]></text>
@@ -50,7 +50,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center">
-					<font fontName="Roboto"/>
+					<font fontName="SansSerif"/>
 				</textElement>
 				<text><![CDATA[Ing. en Sistemas
 Programación Avanzada I
@@ -75,14 +75,14 @@ Daniel Marcelo Paez]]></text>
 		<band height="30" splitType="Stretch">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<textField>
-				<reportElement x="512" y="3" width="10" height="12" uuid="42f75048-8742-4920-8cdb-195d749b1360">
+				<reportElement x="512" y="3" width="98" height="27" uuid="42f75048-8742-4920-8cdb-195d749b1360">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement>
-					<font fontName="Roboto"/>
+					<font fontName="SansSerif"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
