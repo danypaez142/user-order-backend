@@ -44,11 +44,8 @@ public class PDFGeneratorImplementation implements PDFGeneratorInput {
             JasperPrint jasperPrint = JasperFillManager.fillReport(report, params, new JRBeanCollectionDataSource(datasource));
             pdf.write(JasperExportManager.exportReportToPdf(jasperPrint));
         } catch (Exception e) {
-            e.printStackTrace();
             throw new RuntimeException(e);
         }
-
-
         return pdf;
     }
 }
