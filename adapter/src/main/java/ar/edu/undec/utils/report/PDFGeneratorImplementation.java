@@ -1,4 +1,4 @@
-package ar.edu.undec.utils;
+package ar.edu.undec.utils.report;
 
 import ar.edu.undec.service.user.report.UserReport;
 import ar.edu.undec.service.user.report.UserReportDetail;
@@ -12,7 +12,6 @@ import utils.input.PDFGeneratorInput;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -21,7 +20,7 @@ import java.util.List;
 @Service
 public class PDFGeneratorImplementation implements PDFGeneratorInput {
     private final static String reportUsersDir = "/report/usersReport.jasper";
-    private DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm");
+    private final DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm");
 
     @Override
     public ByteArrayOutputStream generateUsersPDF(List<User> users) throws IOException {
