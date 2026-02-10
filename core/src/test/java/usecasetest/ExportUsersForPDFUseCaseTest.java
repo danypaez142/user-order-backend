@@ -54,7 +54,7 @@ public class ExportUsersForPDFUseCaseTest {
         List<User> users = new ArrayList<>();
         users.add(User.factoryFromEntity(1L, "danypaez142@gmail.com", "passw0rd", UserStatus.ACTIVE, "nu11",
                 LocalDateTime.of(2025,9,21,14,30),LocalDateTime.of(2025,9,21,14,0)));
-        users.add(User.factoryFromEntity(2L, "john@example.com", "secret123", UserStatus.ACTIVE, "3mpty",
+        users.add(User.factoryFromEntity(1L, "john@example.com", "secret123", UserStatus.ACTIVE, "3mpty",
                 LocalDateTime.of(2026,1,30,14,30),LocalDateTime.of(2026,1,30,14,0)));
         return users;
     }
