@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.io.ByteArrayOutputStream;
 
 @RestController
-@RequestMapping("users/orders/csv")
+@RequestMapping("orders/export/csv")
 public class ExportOrdersForCSVController {
     ExportOrderForCSVInput input;
 

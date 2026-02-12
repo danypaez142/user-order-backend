@@ -13,7 +13,7 @@ import user.input.ExportUsersForPDFInput;
 import java.io.ByteArrayOutputStream;
 
 @RestController
-@RequestMapping("users/pdf")
+@RequestMapping("users/export/pdf")
 public class ExportUsersForPDFController {
     ExportUsersForPDFInput input;
 
